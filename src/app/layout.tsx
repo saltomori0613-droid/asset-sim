@@ -57,12 +57,12 @@ export default function RootLayout({
   return (
     <html lang="ja" className={`${geistSans.variable} h-full antialiased`}>
       <head>
-        {/* Google AdSense（審査通過後にコメントアウトを外してpublisher IDを設定） */}
-        {/* <script
+        {/* Google AdSense */}
+        <script
           async
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX"
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6784513508633276"
           crossOrigin="anonymous"
-        /> */}
+        />
       </head>
       <body className="min-h-full flex flex-col">
         {children}
