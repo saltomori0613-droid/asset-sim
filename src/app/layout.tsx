@@ -8,8 +8,8 @@ const geistSans = Geist({
   subsets: ["latin"],
 });
 
-const SITE_URL = "https://asset-sim.vercel.app";
-const GA_ID = "G-XXXXXXXXXX"; // ← Google Analytics 管理画面で取得した測定IDに置き換える
+const SITE_URL = "https://asset-sim-beta.vercel.app";
+const GA_ID = "G-0CQ4WTHVP3";
 
 export const metadata: Metadata = {
   title: {
