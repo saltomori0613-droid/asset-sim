@@ -82,12 +82,22 @@ export default function Home() {
             <h1 className="text-lg font-bold text-gray-900">{t.title}</h1>
             <p className="text-xs text-gray-500">{t.subtitle}</p>
           </div>
-          <button
-            onClick={() => setLang(l => l === 'ja' ? 'en' : 'ja')}
-            className="px-3 py-1 text-sm border rounded-full hover:bg-gray-50 transition-colors"
-          >
-            {lang === 'ja' ? 'English' : '日本語'}
-          </button>
+          <div className="flex items-center gap-3">
+            <nav className="hidden sm:flex gap-3 text-sm text-gray-500">
+              <Link href="/guide" className="hover:text-gray-800 transition-colors">
+                {lang === 'ja' ? '入門ガイド' : 'Guide'}
+              </Link>
+              <Link href="/about" className="hover:text-gray-800 transition-colors">
+                About
+              </Link>
+            </nav>
+            <button
+              onClick={() => setLang(l => l === 'ja' ? 'en' : 'ja')}
+              className="px-3 py-1 text-sm border rounded-full hover:bg-gray-50 transition-colors"
+            >
+              {lang === 'ja' ? 'English' : '日本語'}
+            </button>
+          </div>
         </div>
       </header>
 
