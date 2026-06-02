@@ -7,6 +7,8 @@ import { runSimulation, BACKTEST_MIN_YEAR, BACKTEST_MAX_YEAR } from '@/lib/simul
 import AllocationEditor from '@/components/AllocationEditor';
 import SimulationChart from '@/components/SimulationChart';
 import MethodInfo from '@/components/MethodInfo';
+import HomeContent from '@/components/HomeContent';
+import SiteFooter from '@/components/site/SiteFooter';
 import ja from '@/locales/ja';
 import en from '@/locales/en';
 import { Locale } from '@/locales/ja';
@@ -316,14 +318,13 @@ export default function Home() {
           <p className="text-xs text-gray-400 px-1">{t.disclaimer}</p>
         </div>
       </main>
-      <footer className="border-t bg-white mt-8">
-        <div className="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between text-xs text-gray-400">
-          <span>© 2025 アセットアロケーション シミュレーター</span>
-          <Link href="/privacy" className="hover:text-gray-600 transition-colors">
-            {lang === 'ja' ? 'プライバシーポリシー' : 'Privacy Policy'}
-          </Link>
-        </div>
-      </footer>
+
+      {/* SEO・解説コンテンツ（説明・できること・使い方・FAQ） */}
+      <section className="max-w-5xl mx-auto px-4 pb-10">
+        <HomeContent lang={lang} />
+      </section>
+
+      <SiteFooter />
     </div>
   );
 }

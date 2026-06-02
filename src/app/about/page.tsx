@@ -1,25 +1,18 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import ContentHeader from "@/components/site/ContentHeader";
+import SiteFooter from "@/components/site/SiteFooter";
 
 export const metadata: Metadata = {
-  title: "このサービスについて | アセットアロケーション シミュレーター",
+  title: "このサービスについて",
   description: "アセットアロケーション シミュレーターは、株・債券・金などの資産配分をシミュレーションできる無料ツールです。モンテカルロ法とバックテストに対応しています。",
+  alternates: { canonical: "/about" },
 };
 
 export default function AboutPage() {
   return (
     <div className="min-h-screen bg-gray-50">
-      <header className="bg-white border-b sticky top-0 z-10">
-        <div className="max-w-3xl mx-auto px-4 py-3 flex items-center justify-between">
-          <Link href="/" className="text-lg font-bold text-gray-900 hover:text-blue-600 transition-colors">
-            アセットアロケーション シミュレーター
-          </Link>
-          <nav className="flex gap-4 text-sm text-gray-600">
-            <Link href="/guide" className="hover:text-gray-900">入門ガイド</Link>
-            <Link href="/about" className="text-blue-600 font-medium">About</Link>
-          </nav>
-        </div>
-      </header>
+      <ContentHeader active="/about" />
 
       <main className="max-w-3xl mx-auto px-4 py-10">
         <div className="bg-white rounded-xl shadow-sm p-8 space-y-8">
@@ -111,12 +104,7 @@ export default function AboutPage() {
         </div>
       </main>
 
-      <footer className="border-t bg-white mt-8">
-        <div className="max-w-3xl mx-auto px-4 py-4 flex items-center justify-between text-xs text-gray-400">
-          <span>© 2025 アセットアロケーション シミュレーター</span>
-          <Link href="/privacy" className="hover:text-gray-600 transition-colors">プライバシーポリシー</Link>
-        </div>
-      </footer>
+      <SiteFooter />
     </div>
   );
 }
