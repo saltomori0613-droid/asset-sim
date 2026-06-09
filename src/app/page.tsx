@@ -316,6 +316,25 @@ export default function Home() {
           )}
           <MethodInfo t={t} simMode={simMode} monteCarloMethod={monteCarloMethod} />
           <p className="text-xs text-gray-400 px-1">{t.disclaimer}</p>
+          <p className="text-xs text-gray-400 px-1">
+            {lang === 'ja' ? (
+              <>
+                前提となるデータ・計算方法は{' '}
+                <Link href="/methodology" className="underline hover:text-gray-600">データと計算方法</Link>
+                、運営方針・免責は{' '}
+                <Link href="/about" className="underline hover:text-gray-600">運営者情報</Link>
+                {' '}をご覧ください。
+              </>
+            ) : (
+              <>
+                See{' '}
+                <Link href="/methodology" className="underline hover:text-gray-600">Data &amp; Methodology</Link>
+                {' '}and{' '}
+                <Link href="/about" className="underline hover:text-gray-600">About</Link>
+                {' '}for the underlying assumptions.
+              </>
+            )}
+          </p>
         </div>
       </main>
 

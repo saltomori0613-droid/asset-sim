@@ -5,7 +5,8 @@ export default function SiteFooter() {
   const links: [string, string][] = [
     ['/', 'ホーム'],
     ['/guide', '入門ガイド'],
-    ['/about', 'このサービスについて'],
+    ['/methodology', 'データと計算方法'],
+    ['/about', '運営者情報'],
     ['/terms', '免責事項・利用規約'],
     ['/contact', 'お問い合わせ'],
     ['/privacy', 'プライバシーポリシー'],

@@ -44,6 +44,18 @@ export const GUIDES: GuideMeta[] = [
     description: '貯めた資産を取り崩して暮らすフェーズの考え方。4%ルールの根拠と落とし穴、シミュレーターでの検証方法を解説します。',
     emoji: '🔥',
   },
+  {
+    slug: 'monte-carlo-vs-backtest',
+    title: 'モンテカルロ法とバックテストの読み方',
+    description: '本ツールの2つの予測手法の違いと、中央値・パーセンタイル・資産枯渇確率といった結果の正しい見方を、具体的に解説します。',
+    emoji: '📊',
+  },
+  {
+    slug: 'dca-vs-lump-sum',
+    title: '積立投資と一括投資はどちらが有利か',
+    description: '毎月コツコツ買う積立（ドルコスト平均法）と、まとめて投資する一括。仕組み・期待値・向き不向きを、データの考え方とともに整理します。',
+    emoji: '💰',
+  },
 ];
 
 export function getGuide(slug: string): GuideMeta | undefined {

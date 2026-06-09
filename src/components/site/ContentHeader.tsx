@@ -14,9 +14,10 @@ export default function ContentHeader({ active }: { active?: string }) {
         >
           アセットアロケーション シミュレーター
         </Link>
-        <nav className="flex gap-4 text-sm text-gray-600">
+        <nav className="flex gap-3 sm:gap-4 text-sm text-gray-600">
           <Link href="/guide" className={navClass('/guide')}>入門ガイド</Link>
-          <Link href="/about" className={navClass('/about')}>About</Link>
+          <Link href="/methodology" className={navClass('/methodology')}>データ</Link>
+          <Link href="/about" className={navClass('/about')}>運営者情報</Link>
         </nav>
       </div>
     </header>
