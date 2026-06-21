@@ -3,6 +3,8 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  /* 端末のダークモードでもフォーム部品・配色を明るいテーマで描画する */
+  color-scheme: light;
 }
 
 @theme inline {
@@ -12,16 +14,12 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
+/* 本サイトは明るいテーマ固定のデザイン。端末のダークモードでも
+   背景は白系で固定しているため、文字色（foreground）も濃いまま固定して
+   「白背景に薄い文字」になるのを防ぐ。 */
 body {
-  background: var(--background);
-  color: var(--foreground);
+  background: #ffffff;
+  color: #171717;
   font-family: Arial, Helvetica, sans-serif;
 }
 

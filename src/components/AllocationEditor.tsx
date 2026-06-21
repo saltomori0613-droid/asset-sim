@@ -76,7 +76,7 @@ export default function AllocationEditor({ allocation, onChange, t, lang }: Prop
                         className="w-4 h-4 rounded flex-shrink-0"
                       />
                       <span className="w-2.5 h-2.5 rounded-full flex-shrink-0" style={{ backgroundColor: asset.color }} />
-                      <span className="text-xs w-24 flex-shrink-0 truncate">
+                      <span className="text-xs w-24 flex-shrink-0 truncate text-gray-800">
                         {lang === 'en' ? asset.labelEn : asset.labelJa}
                       </span>
                       <input
