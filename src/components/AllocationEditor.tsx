@@ -96,7 +96,7 @@ export default function AllocationEditor({ allocation, onChange, t, lang }: Prop
                           disabled={!checked}
                           onFocus={e => e.currentTarget.select()}
                           onChange={e => updateWeight(asset.id, Number(e.target.value))}
-                          className="w-12 text-right border rounded px-1 py-1 text-sm text-gray-900 disabled:opacity-40 focus:outline-none focus:ring-2 focus:ring-blue-400"
+                          className="w-11 text-right border rounded px-1 py-0.5 text-xs text-gray-900 disabled:opacity-40 focus:outline-none focus:ring-2 focus:ring-blue-400"
                         />
                         <span className="text-xs text-gray-500">%</span>
                       </div>
