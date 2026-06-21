@@ -56,6 +56,12 @@ export const GUIDES: GuideMeta[] = [
     description: '毎月コツコツ買う積立（ドルコスト平均法）と、まとめて投資する一括。仕組み・期待値・向き不向きを、データの考え方とともに整理します。',
     emoji: '💰',
   },
+  {
+    slug: 'portfolio-comparison',
+    title: '【実データ検証】代表的なポートフォリオ6種を徹底比較',
+    description: '全世界株100%・60/40・GPIF型など有名な6つの資産配分を、1990〜2024年の実データで当サイトの計算エンジンが実際にバックテスト。年率リターンと最大下落率を比較します。',
+    emoji: '🏆',
+  },
 ];
 
 export function getGuide(slug: string): GuideMeta | undefined {

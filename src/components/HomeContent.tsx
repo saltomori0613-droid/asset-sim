@@ -165,6 +165,24 @@ export default function HomeContent({ lang }: { lang: 'ja' | 'en' }) {
         </div>
       </section>
 
+      {/* 注目記事（独自データ・実データ検証） */}
+      <section className="bg-white rounded-xl shadow-sm p-6 border-l-4 border-amber-400">
+        <p className="text-xs font-semibold text-amber-600 mb-1">注目記事・実データ検証</p>
+        <h2 className="text-lg font-bold text-gray-900 mb-2">
+          代表的なポートフォリオ6種を1990〜2024年で徹底比較
+        </h2>
+        <p className="text-sm text-gray-700 leading-relaxed mb-4">
+          全世界株100%・株60/債40・GPIF型など有名な資産配分を、当サイトの計算エンジンが
+          実データでバックテスト。年率リターンと最大下落率を数字で比較しています。
+        </p>
+        <Link
+          href="/guide/portfolio-comparison"
+          className="inline-block bg-amber-500 hover:bg-amber-600 text-white font-semibold px-5 py-2.5 rounded-lg transition-colors text-sm"
+        >
+          比較を見る →
+        </Link>
+      </section>
+
       {/* ガイド誘導 */}
       <section className="bg-white rounded-xl shadow-sm p-6">
         <h2 className="text-lg font-bold text-gray-900 mb-2">{c.guideTitle}</h2>
