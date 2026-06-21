@@ -114,10 +114,12 @@ export default function Home() {
               <div className="flex items-center gap-2">
                 <input
                   type="number"
+                  inputMode="numeric"
                   min={0}
                   value={initialAssets}
+                  onFocus={e => e.currentTarget.select()}
                   onChange={e => setInitialAssets(Number(e.target.value))}
-                  className="flex-1 border rounded-lg px-3 py-2 text-right text-sm focus:outline-none focus:ring-2 focus:ring-blue-400"
+                  className="flex-1 border rounded-lg px-3 py-2 text-right text-sm text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-400"
                 />
                 <span className="text-sm text-gray-500">{t.unit}</span>
               </div>
@@ -147,10 +149,12 @@ export default function Home() {
               <div className="flex items-center gap-2">
                 <input
                   type="number"
+                  inputMode="numeric"
                   min={0}
                   value={monthlyAmount}
+                  onFocus={e => e.currentTarget.select()}
                   onChange={e => setMonthlyAmount(Number(e.target.value))}
-                  className="flex-1 border rounded-lg px-3 py-2 text-right text-sm focus:outline-none focus:ring-2 focus:ring-blue-400"
+                  className="flex-1 border rounded-lg px-3 py-2 text-right text-sm text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-400"
                 />
                 <span className="text-sm text-gray-500">{t.unit}</span>
               </div>
@@ -223,11 +227,13 @@ export default function Home() {
                 <div className="flex items-center gap-2">
                   <input
                     type="number"
+                    inputMode="numeric"
                     min={BACKTEST_MIN_YEAR}
                     max={BACKTEST_MAX_YEAR}
                     value={backtestStartYear}
+                    onFocus={e => e.currentTarget.select()}
                     onChange={e => setBacktestStartYear(Number(e.target.value))}
-                    className="w-24 border rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-400"
+                    className="w-24 border rounded-lg px-3 py-2 text-sm text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-400"
                   />
                   <span className="text-xs text-gray-500">{t.backtestRange.replace('{min}', String(BACKTEST_MIN_YEAR)).replace('{max}', String(BACKTEST_MAX_YEAR))}</span>
                 </div>

@@ -57,7 +57,7 @@ export default function AllocationEditor({ allocation, onChange, t, lang }: Prop
               className="w-full flex items-center justify-between px-3 py-2 bg-gray-50 hover:bg-gray-100 text-sm font-medium text-gray-700"
             >
               <span>{lang === 'en' ? cat.labelEn : cat.labelJa}</span>
-              <span className="text-gray-400">{isOpen ? '▲' : '▼'}</span>
+              <span className="text-gray-500">{isOpen ? '▲' : '▼'}</span>
             </button>
 
             {isOpen && (
@@ -85,16 +85,18 @@ export default function AllocationEditor({ allocation, onChange, t, lang }: Prop
                         value={weight}
                         disabled={!checked}
                         onChange={e => updateWeight(asset.id, Number(e.target.value))}
-                        className="flex-1 h-2 accent-blue-600 disabled:opacity-30"
+                        className="flex-1 h-2 accent-blue-600 disabled:opacity-40"
                       />
                       <div className="flex items-center gap-1 w-16 flex-shrink-0">
                         <input
                           type="number"
+                          inputMode="numeric"
                           min={0} max={100} step={1}
                           value={weight}
                           disabled={!checked}
+                          onFocus={e => e.currentTarget.select()}
                           onChange={e => updateWeight(asset.id, Number(e.target.value))}
-                          className="w-11 text-right border rounded px-1 py-0.5 text-xs disabled:opacity-30"
+                          className="w-12 text-right border rounded px-1 py-1 text-sm text-gray-900 disabled:opacity-40 focus:outline-none focus:ring-2 focus:ring-blue-400"
                         />
                         <span className="text-xs text-gray-500">%</span>
                       </div>
